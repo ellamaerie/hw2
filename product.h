@@ -39,7 +39,7 @@ public:
     int getQty() const;
     void subtractQty(int num);
 
-protected:
+protected:                  // must use getName, etc... because private
     std::string name_;
     double price_;
     int qty_;

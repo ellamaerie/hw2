@@ -29,10 +29,16 @@ std::string Product::getName() const
     return name_;
 }
 
+/*
 void Product::subtractQty(int num)
 {
     qty_ -= num;
 }
+*/
+void Product::subtractQty(int num) {
+    qty_ -= num;
+}
+
 
 int Product::getQty() const
 {

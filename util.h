@@ -13,20 +13,28 @@
 template <typename T>
 std::set<T> setIntersection(std::set<T>& s1, std::set<T>& s2)
 {
-
-
-
-
-
+  //AND search
+  std::set<T> newSet;
+  for(const T& x : s1){
+    if (s2.find(x) != s2.end()){
+      newSet.insert(x);
+    }
+  }
+  return newSet;
 }
+
 template <typename T>
 std::set<T> setUnion(std::set<T>& s1, std::set<T>& s2)
 {
+  // OR search
+  // defined as all the products that contain ANY of the search terms entered
 
+  std::set<T> newSet;
+  newSet = s1;
 
+  newSet.insert(s2.begin(), s2.end());
 
-
-
+  return newSet;
 }
 
 /***********************************************/
